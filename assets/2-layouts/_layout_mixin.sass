@@ -1,0 +1,37 @@
+@use '../1-base/_variables'
+
+
+
+
+@mixin alinhar-container
+
+    margin: 0 auto
+    max-width: variables.$container-width
+    display: flex
+    justify-content: space-between    
+
+
+@mixin rounded-input
+    height: 40px
+    border-top-left-radius:  25px    
+    border-bottom-left-radius: 25px
+    padding-left: 25px   
+
+
+@mixin background-image($image)
+    background-image: $image
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 200px
+
+@mixin hover
+    transition: .5s
+    &:hover
+        color: red
+
+
+@mixin display
+    display: flex
+    justify-content: center
+    align-items: center        

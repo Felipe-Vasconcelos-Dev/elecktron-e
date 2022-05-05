@@ -1,0 +1,48 @@
+@use '../1-base/_variables'
+@use    '../2-layouts/_layout_mixin'   
+@use  '../1-base/_base-mixins' 
+    
+.newsletter-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 50vh
+    text-align: center
+    border-top: 2px solid variables.$gray-text-color
+    background-color: variables.$light-color
+    h2
+        font-size: 2rem
+        padding: 2rem 0
+        span
+            font-size: 3rem
+            font-weight: bold
+            text-transform: uppercase
+    i
+        border: 1px solid variables.$light-color
+        padding: .8rem
+        font-size: 1.2rem
+        color: variables.$bg-color
+        margin: 2rem  0
+    #form-new
+        width: 50%
+        #input
+            height: 40px
+            transition: 1s
+            width: 80%
+            @include layout_mixin.rounded-input
+            border: 2px solid variables.$primary-color
+            &:focus
+                font-size: 10px
+                line-height: 1px
+                padding-top: 0
+            @include base-mixins.mobile
+
+                width:50%
+            @include base-mixins.tablet
+
+                width:60%
+        
+        @include base-mixins.mobile
+            width: 80%        
+            

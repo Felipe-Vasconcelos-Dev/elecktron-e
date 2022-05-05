@@ -1,0 +1,72 @@
+
+@use './_layout_mixin'
+@use '../1-base/_variables'
+@use '../1-base/_base-mixins'
+
+
+
+
+
+.banner
+    @include layout_mixin.alinhar-container
+    padding: 3rem  0
+    @include base-mixins.mobile
+        flex-direction: column
+        width: 100%
+        margin: 0 auto
+        padding: 5px
+        align-items: center
+    @include base-mixins.tablet
+        padding: 1px
+        justify-content: space-around
+
+        
+        
+    
+    
+    &-card
+        width: 30%
+        height: 150px
+        @include base-mixins.mobile
+            width: 80%
+            margin-bottom: 10px
+              
+    #banner-1
+        @include layout_mixin.background-image(url('../img/banner-1.jpg'))
+        transition: .3s
+        &:hover
+            background-size: 120%
+    #banner-2
+        @include layout_mixin.background-image(url('../img/banner-2.jpg'))
+        transition: 1s
+        &:hover
+            background-size: 120%
+    #banner-3
+        @include layout_mixin.background-image(url('../img/banner-3.jpg'))
+        transition: .3s
+        &:hover
+            background-size: 120%
+    &-cover
+        width: 70%
+        background-color: variables.$primary-color
+        height: 100%
+        border-bottom-right-radius: 6rem
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column 
+        padding: 1rem
+        color: variables.$light-color
+        
+        h2
+            font-size: 2.1rem
+            margin-bottom: 1rem
+            font-family: variables.$font-open-sans
+            @include base-mixins.tablet
+            font-size: 1.5rem
+
+        i
+            color: variables.$light-color  
+        a
+            color: variables.$light-color
+            font-size: 1.2rem

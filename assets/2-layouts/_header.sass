@@ -1,0 +1,240 @@
+@use '../1-base/_variables'
+@use './_layout_mixin'
+@use '../1-base/_base-mixins'
+    
+.header
+
+    width: 100%
+    background-color: variables.$bg-color
+    border-bottom: 3px solid variables.$section-bg-color
+    
+
+    &-top
+        background-color: variables.$secundary-bg-color
+        color: variables.$light-color
+        @include base-mixins.mobile
+            display: none
+        
+
+            
+        &-container
+            @include layout_mixin.alinhar-container
+            padding:  .8rem 0 
+            align-items: center
+            .store-info-container
+                span
+                    margin-right: 10px
+                    i
+                        padding-right: 10px
+            @include base-mixins.mobile
+                width: 100%  
+            @include base-mixins.tablet
+                flex-wrap: wrap
+                          
+
+            .use-top-menu
+
+                span
+                    margin-right: 1rem
+                    a
+                        color: variables.$light-color
+                    i
+                        padding-right: .3rem
+
+    .main-header
+        border-bottom: 3px solid red
+        &-container
+            @include layout_mixin.alinhar-container
+            align-items: center
+            padding: 1.3rem 0
+            @include base-mixins.mobile
+                flex-direction: column
+                justify-content: center
+            .form-container
+                display: flex
+                justify-content: space-between
+                width: 100%
+            @include base-mixins.tablet
+                display: flex
+                flex-direction: column
+                .form-container
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+                    align-items: center  
+                    justify-content: space-between
+                     
+            a, span, i
+                color: variables.$light-color
+
+            .logo
+                font-size: 3rem
+                font-weight: 900
+                display: flex
+                i
+                    font-size: 2rem  
+                    color: variables.$primary-color  
+            #search-form
+                width: 70%
+                @include base-mixins.mobile
+                    width: 100%
+                    display: flex
+                    margin-bottom: 2rem
+                @include base-mixins.tablet
+                    @include layout_mixin.display
+                    padding-bottom: 2rem
+                    width: 100%
+                    
+
+                
+                input
+                    height: 40px
+                    margin-top: 20px
+                    
+
+                #search
+                    width: 60%
+                    @include layout_mixin.rounded-input
+                    @include base-mixins.tablet
+                    width: 80%
+                   
+                            
+            .header-action-menu
+                display: flex
+                .wishlist-container , .header-cart-container  
+                    display: flex
+                    margin-right: 15px
+                    position: relative
+                    align-items: center
+                    flex-direction: column
+                    justify-content: baseline
+                                       
+
+                    .qty
+                        position: absolute
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        top: -10px
+                        right: 2px
+                        width: 18px
+                        height: 18px
+                        color: variables.$light-color
+                        border-radius: 50%
+                        background-color: variables.$primary-color
+                        i
+                            margin-bottom: 2rem
+                    a:hover
+                        color: variables.$primary-color   
+
+                @include base-mixins.mobile
+                    width: 100%
+                    @include layout_mixin.display
+    .header-footer
+        width: 100%
+        background-color: variables.$light-color
+        .header-footer-container
+            @include layout_mixin.alinhar-container
+            width: variables.$container-width
+            padding: 1rem 0
+            width: 100%
+            ul
+                display: flex
+                @include base-mixins.mobile
+                    display: none
+
+                li
+                    margin-right:  1.3rem
+                    a
+                        color: variables.$bg-color
+                        border: 2px solid transparent
+                        &:hover
+                            border-bottom-color: variables.$primary-color
+            @include base-mixins.mobile
+                width: 100%
+            @include base-mixins.tablet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+
+    

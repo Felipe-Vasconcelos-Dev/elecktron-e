@@ -1,0 +1,79 @@
+@use '../1-base/_variables'
+@use '../2-layouts/_layout_mixin'
+@use '../1-base/_base-mixins'
+
+.products-grid
+    display: flex   
+    flex-direction: column
+    padding: 2rem
+    h2
+        font-size: 2rem
+        width: variables.$container-width
+        margin: 0 auto
+        width: 100%
+    @include base-mixins.mobile
+        margin-top: 20px    
+    .products-grids-container
+        padding: 2rem 0
+        width: variables.$container-width
+        @include layout_mixin.alinhar-container
+        @include base-mixins.mobile
+            flex-direction: column
+            width: 100%
+            margin-top: 50px
+        @include base-mixins.tablet
+            flex-wrap: wrap
+            width: 100%
+        .products-grid-card
+            text-align: center
+            position: relative
+            display: grid
+            gap: 8px
+            width: 20%
+            border: 1px solid variables.$gray-text-color
+            padding: 1rem
+            padding-bottom: 2rem
+            transition: .5s
+            margin-left: 1px
+            margin-bottom: 10px
+            
+            @include base-mixins.mobile
+                flex-direction: column
+                width: 100%
+                margin: 10px 0
+            @include base-mixins.tablet
+                width: 48%    
+            
+            &:hover
+                border: 1px solid variables.$primary-color
+                box-shadow: 0 10px 30px variables.$dark-color
+                transform: translateY(-10px)
+            img
+                width: 100%
+            .label
+                position: absolute
+                top: 1rem
+                right: 1rem
+                padding: 2px 6px
+                font-size: 1rem
+                color:  variables.$light-color
+            .new
+                background-color: variables.$primary-color
+            .hot
+                background-color: none
+                border: 1px solid variables.$primary-color  
+                color: variables.$primary-color  
+                &:hover
+                    box-shadow: 0 10px 30px variables.$primary-color
+            .category
+                color: variables.$gray-text-color
+                font-size: 1.3rem
+                margin-top: 1rem
+            .product-name
+                font-size: 1.2rem
+                text-transform: uppercase
+                font-weight: 600
+            .product-price
+                color: variables.$primary-color    
+                font-size: 1.6rem
+                font-weight: 600
